@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Full Screen Image with Navbar</title>
+    <style>
+        body,
+        html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            width: 100%;
+            font-family: Arial, sans-serif;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: center;
+            background-color: #333;
+            padding: 10px;
+            position: absolute;
+            width: 100%;
+            top: 0;
+            z-index: 1;
+        }
+
+        .navbar a {
+            color: white;
+            padding: 14px 20px;
+            text-decoration: none;
+            text-align: center;
+        }
+
+        .navbar a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+
+        .full-screen-image {
+            position: relative;
+            width: 100%;
+            height: 80vh;
+            /* ครึ่งหนึ่งของความสูงหน้าจอ */
+            background-image: url('https://www.infoquest.co.th/wp-content/uploads/2024/06/E5C15971C2E2023BFD878800F0C0B190.jpg');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .section-title {
+            color: white;
+            font-size: 32px;
+            background-color: red;
+            padding: 10px;
+            border-radius: 8px;
+            margin: 0;
+
+        }
+
+        .bottom-section {
+            display: flex;
+            align-items: flex-start;
+            padding: 200px;
+            height: 300px;
+            /* ครึ่งหนึ่งของความสูงหน้าจอ */
+        }
+
+        .food-image-container {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            margin-right: 20px;
+            /* ระยะห่างด้านขวาจากรูปภาพ */
+        }
+
+        .food-image-container img {
+            width: 180px;
+            /* ขนาดของรูปภาพ */
+            height: auto;
+            border-radius: 8px;
+            /* มุมโค้งมน */
+        }
+
+        .details {
+            flex-grow: 1;
+        }
+
+        .centered-text {
+            position: absolute;
+            top: 40%;
+            /* ปรับตำแหน่งแนวตั้ง */
+            left: 50%;
+            transform: translate(-50%, 280%);
+            color: rgb(255, 255, 255);
+            font-size: 30px;
+            text-align: center;
+            background-color: rgba(255, 0, 0, 0.444);
+            padding: 10px;
+            border-radius: 8px;
+            z-index: 2;
+        }
+
+        .detailstwo {
+            position: absolute;
+            top: 40%;
+            /* ปรับตำแหน่งแนวตั้ง */
+            left: 50%;
+            transform: translate(-42%, 320%);
+            color: rgb(0, 0, 0);
+            flex-grow: 1;
+            border-left: 2px solid #d10000;
+            /* เส้นตรงกลางระหว่างรูปภาพและรายละเอียดอาหาร */
+            padding-left: 20px;
+            /* ระยะห่างจากเส้น */
+        }
+
+        .detailsone {
+            position: absolute;
+            top: 40%;
+            /* ปรับตำแหน่งแนวตั้ง */
+            left: 50%;
+            transform: translate(-42%, 425%);
+            color: rgb(0, 0, 0);
+            flex-grow: 1;
+            border-left: 2px solid #d3d3d3;
+            /* เส้นตรงกลางระหว่างรูปภาพและรายละเอียดอาหาร */
+            padding-left: 20px;
+            /* ระยะห่างจากเส้น */
+        }
+
+        .detailst {
+            position: absolute;
+            top: 40%;
+            /* ปรับตำแหน่งแนวตั้ง */
+            left: 50%;
+            transform: translate(-64%, 335%);
+            color: rgb(0, 0, 0);
+            flex-grow: 1;
+            border-left: 2px solid #d3d3d3;
+            /* เส้นตรงกลางระหว่างรูปภาพและรายละเอียดอาหาร */
+            padding-left: 20px;
+            /* ระยะห่างจากเส้น */
+        }
+
+        .details {
+            flex-grow: 1;
+            border-left: 2px solid #ddd;
+            /* เส้นตรงกลางระหว่างรูปภาพและรายละเอียดอาหาร */
+            padding-left: 20px;
+            /* ระยะห่างจากเส้น */
+        }
+
+        .menu-serh {
+            position: absolute;
+            top: 100%;
+            /* ปรับตำแหน่งแนวตั้ง */
+            left: 50%;
+            transform: translate(-195%, -200%);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 20px;
+            background-color: #ff0000;
+            color: white;
+            font-size: 18px;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="navbar">
+        <a href="index.html">Home</a>
+        <a href="menu.html">Menu</a>
+        <a href="contact.html">Contact</a>
+    </div>
+    <div class="full-screen-image">
+        <div class="centered-text ">MANGO STICKY RICE
+            <div>อร่อย หวาน มัน ถูกปากคนไทย</div>
+        </div>
+
+    </div>
+    <i class="fa-solid fa-circle-notch"></i>
+    <div class="bottom-section">
+        <div class="food-image-container">
+            <img src="https://st.bigc-cs.com/cdn-cgi/image/format=webp,quality=90/public/media/catalog/product/78/88/8851004199878/8851004199878_1-20230310180537-.jpg"
+                alt="Food Item 1">
+            <img src="https://st.bigc-cs.com/cdn-cgi/image/format=webp,quality=90/public/media/catalog/product/09/88/8851004120209/8851004120209_1-20230310203127-.jpg"
+                alt="Food Item 2">
+            <img src="https://st.bigc-cs.com/cdn-cgi/image/format=webp,quality=90/public/media/catalog/product/96/88/8850157514996/8850157514996-20240709102008-.jpg"
+                alt="Food Item 3">
+        </div>
+        <div class="menu-serh">สินค้าเเนะนำทางเรา</div>
+        <div class="detailst">
+            <h2>สำหรับคุณ</h2>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quo!</p>
+
+        </div>
+        <div class="details">
+            <h2>รายละเอียดอาหาร</h2>
+            <p>ที่นี่คือรายละเอียดของอาหารที่คุณสามารถเลือกได้ ...</p>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sit aspernatur adipisci molestiae! Iure
+                distinctio natus praesentium, expedita et suscipit. Consequatur!</p>
+        </div>
+        <div class="detailstwo">
+            <h2>รายละเอียดอาหาร</h2>
+            <p>ที่นี่คือรายละเอียดของอาหารที่คุณสามารถเลือกได้ ...</p>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sit aspernatur adipisci molestiae! Iure
+                distinctio natus praesentium, expedita et suscipit. Consequatur!</p>
+            <p>adipisicing elit. Voluptate, consectetur.</p>
+        </div>
+        <div class="detailsone">
+            <h2>รายละเอียดอาหาร</h2>
+            <p>ที่นี่คือรายละเอียดของอาหารที่คุณสามารถเลือกได้ ...</p>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sit aspernatur adipisci molestiae! Iure
+                distinctio natus praesentium, expedita et suscipit. Consequatur!</p>
+            <p>adipisicing elit. Voluptate, consectetur.</p>
+        </div>
+
+
+    </div>
+
+</body>
+
+</html>
